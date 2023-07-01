@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  background: url("assets/bg-main-desktop.png") 70% 130%;
+}
+
+body::after {
+  content: url("assets/bg-pattern-1.svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-10%);
+  z-index: -1;
+}
+
+h1 {
+  font-size: 88px;
+  line-height: 88px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  color: #191826;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 20px;
+  line-height: 34px;
+}
+
+header,
+main,
+footer {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+header {
+  margin-top: 62px;
+  margin-bottom: 321px;
+}
+
+.logo {
+  height: 32px;
+  padding-bottom: 130px;
+}
+
+.header {
+  max-width: 80%;
+}
+
+.header h1 {
+  margin-bottom: 40px;
+}
+
+main {
+  background: #191826 url("assets/bg-pattern-2.svg") no-repeat 40% -40%;
+  height: 600px;
+  border-radius: 12px;
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.app {
+  position: absolute;
+  left: 10%;
+  transform: translateY(-80%);
+  width: 312px;
+  height: 642px;
+}
+
+.promo {
+  background: #fa7453;
+  color: #fcfaf9;
+  display: flex;
+  flex-direction: column;
+  width: 333px;
+  position: absolute;
+  right: 10%;
+  bottom: -18%;
+  padding: 54px;
+  border-radius: 12px;
+}
+
+.promo p {
+  padding: 22px 0 39px 0;
+  display: flex;
+  align-items: center;
+}
+
+.promo span {
+  padding-right: 10px;
+}
+
+.price {
+  font-size: 65px;
+}
+
+.promo a {
+  width: 100%;
+  padding: 15px 0 15px 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.icon {
+  padding-right: 8px;
+}
+
+.icon-app {
+  background: #191826;
+  margin-bottom: 16px;
+  color: #fcfaf9;
+}
+
+.icon-android {
+  background: #fcfaf9;
+  color: #191826;
+}
+
+.icon-app:hover {
+  background: #66e2dc;
+}
+
+.icon-android:hover {
+  background: #ffb964;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 90px;
+  position: relative;
+}
+
+.footer__text {
+  align-self: self-start;
+}
+
+.footer__icon {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.footer__icon a:not(:last-child) {
+  margin-right: 10px;
+}
+
+.soc-icon:hover {
+  filter: invert(78%) sepia(35%) saturate(829%) hue-rotate(329deg)
+    brightness(101%) contrast(103%);
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .logo {
+    padding-bottom: 95px;
+  }
+  .header {
+    max-width: 70%;
+  }
+  .header h1 {
+    margin-bottom: 28px;
+  }
+  header {
+    margin-bottom: 250px;
+  }
+  body {
+    background: url("assets/bg-main-tablet.png");
+    background-position: 100% -30%;
+  }
+  .app {
+    left: 5%;
+    transform: translateY(-80%);
+    width: 270.21px;
+    height: 556px;
+  }
+  .promo {
+    width: 302px;
+    right: 5%;
+    padding: 45px;
+  }
+  .promo p {
+    padding: 12px 0 32px 0;
+  }
+  footer {
+    margin-bottom: 85px;
+  }
+  .footer__logo {
+    position: absolute;
+    transform: translateY(-180%);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    background: url("assets/bg-main-mobile.png");
+    background-position: 300% -15%;
+    background-repeat: no-repeat;
+  }
+  body::after {
+    content: "";
+  }
+  header,
+  main,
+  footer {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  .header {
+    max-width: 100%;
+    margin-bottom: 166px;
+  }
+  .logo {
+    padding: 39px 0 64px ;
+  }
+  main {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 450px;
+  }
+  .promo {
+
+    position: relative;
+    width: 100%;
+    right: 0;
+    bottom: -65%;
+
+  }
+  .app {
+    width: 208.97px;
+    height: 430px;
+    left: 30%;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__logo {
+    position: relative;
+ 
+  }
+  .footer__icon {
+    align-self: self-start;
+    margin: 64px 0 80px;
+  }
+}
